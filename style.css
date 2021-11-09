@@ -1,0 +1,252 @@
+*, html, body{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow-x:hidden;
+    overflow-y:auto;
+    color:white;
+}
+.navbar{
+    width: 100%;
+    height: 50px;
+    background: black;
+}
+.navbar-container{
+    display:flex;
+    align-items: center;
+    background: black;
+    padding-left: 50px;
+    height: 100%;
+    color:white;
+    font-variant: small-caps;
+}
+.logo-container{
+    flex: 1;
+    font-weight: 900px;
+    font-size:24px;
+    letter-spacing: .1em;
+    color: red;
+}
+.menu-container{
+    flex: 6
+}
+.menu-list{
+    display:flex;
+    list-style:none;
+    /* justify-content: space-evenly; */
+}
+.menu-list-item{
+    margin: 0 20px;
+    letter-spacing: .2em;
+    padding-left: 5px;
+}
+.menu-list-item.active{
+    /* border-bottom: 1px solid white; */
+    color: red;
+}
+.menu-list-item:hover{
+    cursor:pointer;
+    border-top: 1px solid white;
+    border-color: red;
+}
+.profile-container{
+    flex: 2;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right:1rem;
+    transition: all 1s ease;
+}
+.profile-picture{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-picture:hover{
+    cursor: pointer;
+}
+.profile-text-container{
+    color:white;
+}
+.profile-text-container i{
+    cursor: pointer;
+}
+.toggle-mode{
+    width: 50px;
+    height: 25px;
+    background: white;
+    border-radius: 15px;
+    color:goldenrod;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    position: relative;
+}
+.toggle-ball{
+    height:22px;
+    width: 22px;
+    background: black;
+    position: absolute;
+    left: 1px;
+    border-radius: 50%;
+}
+.toggle-ball:hover{
+    cursor: pointer;
+}
+
+.fas.fa-moon{
+    color: black;
+}
+.sidebar{
+    width: 50px;
+    height: 100%;
+    background: black;
+    position: fixed;
+    top: 0;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-evenly;
+    font-size:20px;
+}
+.sidebar i:hover{
+    cursor: pointer;
+    color:red;
+}
+.container{
+    min-height:calc(100vh - 50px);
+    background: #151515;
+}
+.content-container{
+    margin-left: 50px;
+
+}
+.featured-content{
+    height: 50vh;
+    background: orange;
+    padding: 2em;
+}
+.featured-title{
+    width: 200px;
+}
+.featured-description{
+    width: 250px;
+    color: lightgray;
+    margin: 1em 0;
+}
+.featured-button{
+    background: red;
+    color:white;
+    letter-spacing: .1em;
+    padding: 10px 15px;
+    border-radius: 10px;    
+    border:none;
+    outline:none;
+    font-weight: bold;
+}
+.movie-list-container{
+    margin: 2em 1em;
+    padding: 1em;
+    color:white;
+    width: 100%;
+    position:relative;
+}
+.movies-list{
+    display:flex;
+    height: 300px;
+    align-items:center;
+    position:relative;
+}
+.movie-list-wrapper{
+    position:relative;
+}
+.movie-list-item-img{
+    width: 270px;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: all .8s ease;
+}
+.movie-list-item{
+    margin-right: 1em;
+    position: relative;
+}
+.movie-list-item:hover .movie-list-item-img{
+    transform: scale(1.2);
+    cursor: pointer;
+    margin: 0 20px;
+    opacity: .8;
+}
+.movie-list-item-title{
+    background:#333;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position:absolute;
+    top: 10%;
+    left: 20px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.movie-list-item-desc{
+    background:#333;
+    padding: 0 10px;
+    font-size: 18px;
+    position:absolute;
+    top: 30%;
+    left: 20px;
+    border-radius: 5px;
+    right:20px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.movie-list-item-button{
+    position:absolute;
+    bottom: 10px;
+    left: 20px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button{
+    opacity:.8;
+} 
+.right-more-arrow{
+    font-size: 120px;
+    position:absolute;
+    top: 125px;
+    right: 0;
+    opacity: .5;
+}
+/* .left-more-arrow{
+    font-size: 120px;
+    position:absolute;
+    top: 125px;
+    left: 0;
+    opacity: .5;
+    margin-left:15px;
+} */
+.right-more-arrow:hover{
+    opacity:1;
+}
+button:hover{
+    cursor: pointer;
+}
+button{    
+    background: green;
+    color:white;
+    letter-spacing: .1em;
+    padding: 10px;
+    border-radius: 10px;    
+    border:none;
+    outline:none;
+    font-weight: bold;
+}
